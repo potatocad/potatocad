@@ -1,0 +1,19 @@
+[package]
+name = "potatocad"
+version = "0.0.1"
+edition = "2021"
+rust-version = "1.75"
+description = "CAD that runs on a potato: a no_std core for tiny parametric CAD on microcontrollers. This first release is its STL writer."
+license = "MIT"
+repository = "https://github.com/potatocad/potatocad"
+readme = "README.md"
+keywords = ["cad", "no-std", "embedded", "stl", "3d"]
+categories = ["no-std", "embedded", "graphics", "rendering::data-formats"]
+
+[dependencies]
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
